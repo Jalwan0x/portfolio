@@ -1,0 +1,145 @@
+Build a clean, professional one-page website for Jalwan, an independent Web Penetration Tester.
+
+The website promotes one service only:
+
+Web Application Penetration Testing
+
+The goal is to clearly answer:
+
+What is this testing used for?
+
+Why should I choose you?
+
+Use subtle, ethical dark psychology to create trust, authority, and urgency — without fear-mongering or hype.
+
+🧠 Tone & Style
+
+Dark, minimal, professional
+
+Calm confidence
+
+Short, direct sentences
+
+Founder-friendly language
+
+No technical overload
+
+🏠 PAGE CONTENT
+🔥 Hero Section (Authority + Clarity)
+
+Headline:
+Know what attackers can do — before they do it.
+
+Sub-text:
+I manually test web applications to identify real security weaknesses that can be exploited in the real world.
+
+Primary CTA:
+Request Web Penetration Test
+
+Small line under CTA:
+Manual assessments are limited.
+
+🧩 What This Testing Is Used For (Value Clarity)
+
+Web penetration testing helps you:
+
+Understand where your application is exposed
+
+See how user data could be accessed or abused
+
+Identify weaknesses before they become incidents
+
+Make informed security decisions with real evidence
+
+Line below (ownership framing):
+Unknown risks are still risks.
+
+🧪 The Service
+
+Web Penetration Testing includes:
+
+Web application vulnerabilities
+
+API security issues
+
+Authentication & authorization flaws
+(IDOR, JWT, OAuth)
+
+Business logic abuse paths
+
+One focused assessment. No distractions.
+
+🧠 Why Choose Me (Authority + Social Proof)
+
+Independent web security researcher
+
+Hands-on experience in web penetration testing
+
+Active bug bounty hunter
+
+Found valid security issues in large, well-known companies
+
+Focused on real, exploitable impact
+
+Contrast line:
+If it matters to attackers, it matters here.
+
+🧠 Why This Matters (Loss Awareness)
+
+Many breaches start from simple, overlooked issues
+
+Attackers look for what was never tested
+
+Silence does not mean safety
+
+⏳ Soft Scarcity
+
+To maintain quality and focus, only a limited number of tests are accepted.
+
+📬 Contact
+
+Request a Web Penetration Test
+
+Form fields:
+
+Name
+
+Email
+
+Website / App URL
+
+Message
+
+Email alternative:
+hi@jalwan.app
+
+Small reassurance text:
+No obligation. Just clarity.
+
+❌ DO NOT INCLUDE
+
+Configuration or deployment issues
+
+Fix instructions
+
+Retesting
+
+Timelines
+
+Pricing tables
+
+Testimonials or logos
+
+Certifications
+
+🧠 Why this converts
+
+Explains why testing exists
+
+Establishes authority without bragging
+
+Uses implied responsibility
+
+Keeps the decision simple
+
+Feels professional and exclusive
