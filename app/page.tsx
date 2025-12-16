@@ -118,10 +118,10 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto space-y-6">
             <Checklist
               items={[
-                "I've found critical vulnerabilities in apps processing millions in revenue",
                 "Active bug bounty hunter with valid reports on major platforms",
                 "I don't use automated scanners that flag false positives. Everything is manual.",
-                "Worked with YC companies, fintech startups, and SaaS platforms you've heard of"
+                "Deep knowledge of OWASP Top 10 and real-world attack vectors",
+                "Fast turnaround with detailed, actionable remediation steps"
               ]}
             />
             <p className="text-subtle text-base italic mt-6">Real attackers work manually. That's how I work too.</p>
