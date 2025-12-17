@@ -119,7 +119,7 @@ export default function HomePage() {
             <Checklist
               items={[
                 "Manual testing finds what scanners miss. Real vulnerabilities, not false alarms.",
-                "I hunt bugs on HackerOne and Bugcrowd. Same skillset, now testing your app.",
+                "I test web apps for a living. Same skills as finding bugs, now working for you.",
                 "I understand what hackers actually care about. Not technical frameworks, real impact.",
                 "You get clear findings. No noise, no CYA reports."
               ]}
