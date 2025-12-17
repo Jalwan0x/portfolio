@@ -15,19 +15,28 @@ a {
 }
 
 .section-shell {
-  @apply max-w-6xl mx-auto px-6 py-16 space-y-12 animate-fadeIn;
+  @apply max-w-6xl mx-auto px-6 py-12 space-y-8 animate-fadeIn;
 }
 
 .card {
-  @apply bg-white/5 border border-white/15 rounded-2xl p-6 shadow-glow backdrop-blur transition-all duration-300 hover:border-accent/50 hover:shadow-glowStrong hover:-translate-y-1;
+  @apply bg-white/5 border border-white/15 rounded-2xl p-6 shadow-glow backdrop-blur transition-all duration-300 hover:border-accent/50 hover:shadow-glowStrong hover:-translate-y-2 hover:bg-white/10;
 }
 
+.card-stagger {
+  @apply animate-fadeIn;
+}
+
+.card-stagger:nth-child(1) { animation-delay: 0s; }
+.card-stagger:nth-child(2) { animation-delay: 0.1s; }
+.card-stagger:nth-child(3) { animation-delay: 0.2s; }
+.card-stagger:nth-child(4) { animation-delay: 0.3s; }
+
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accentDark px-4 py-2.5 text-sm font-semibold shadow-glow transition-all duration-300 hover:-translate-y-1 hover:shadow-glowStrong hover:from-accentLight hover:to-accent active:scale-95 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base text-black md:px-6 md:py-3 md:text-base;
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accentDark px-4 py-2.5 text-sm font-semibold shadow-glow transition-all duration-300 hover:-translate-y-2 hover:shadow-glowStrong hover:from-accentLight hover:to-accent active:scale-95 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base text-black md:px-6 md:py-3 md:text-base cursor-pointer;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-2 text-xs font-semibold !text-white transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent/20 hover:text-accent active:scale-90 active:translate-y-0.5 active:shadow-none md:px-4 md:py-2.5 md:text-sm;
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-2 text-xs font-semibold !text-white transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent/20 hover:text-accent hover:shadow-glowDim active:scale-90 active:translate-y-0.5 active:shadow-none md:px-4 md:py-2.5 md:text-sm cursor-pointer;
 }
 
 .badge {

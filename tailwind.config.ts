@@ -37,7 +37,11 @@ const config: Config = {
         fadeIn: "fadeIn 0.6s ease-out",
         slideUp: "slideUp 0.6s ease-out",
         slideDown: "slideDown 0.4s ease-out",
-        float: "float 3s ease-in-out infinite"
+        float: "float 3s ease-in-out infinite",
+        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        glow: "glow 2s ease-in-out infinite",
+        shine: "shine 3s linear infinite",
+        gradientShift: "gradientShift 6s ease-in-out infinite"
       },
       keyframes: {
         fadeIn: {
@@ -55,6 +59,22 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" }
+        },
+        pulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" }
+        },
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 5px rgba(94, 240, 193, 0.5), 0 10px 40px rgba(94, 240, 193, 0.2)" },
+          "50%": { boxShadow: "0 0 20px rgba(94, 240, 193, 0.8), 0 20px 60px rgba(94, 240, 193, 0.4)" }
+        },
+        shine: {
+          "0%": { backgroundPosition: "-1000px 0" },
+          "100%": { backgroundPosition: "1000px 0" }
+        },
+        gradientShift: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" }
         }
       }
     }

@@ -37,16 +37,16 @@ export default function HomePage() {
               <CTAButton href="/risks" variant="secondary">See all risks</CTAButton>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
-              <div className="card p-4 space-y-1 bg-gradient-to-br from-danger/10 to-transparent border-danger/30 hover:border-danger/50 group cursor-pointer">
-                <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-danger transition-colors">🔐 Account Access</p>
+              <div className="card-stagger card p-4 space-y-1 bg-gradient-to-br from-danger/15 to-danger/5 border-danger/40 hover:border-danger/70 group cursor-pointer">
+                <p className="text-danger font-semibold text-sm flex items-center gap-2 group-hover:text-danger transition-colors">🔐 Account Access</p>
                 <p className="text-subtle text-xs">Authentication is broken in most apps. Can attackers log in as your users? They usually can.</p>
               </div>
-              <div className="card p-4 space-y-1 bg-gradient-to-br from-warning/10 to-transparent border-warning/30 hover:border-warning/50 group cursor-pointer">
-                <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-warning transition-colors">📊 Data Exposure</p>
+              <div className="card-stagger card p-4 space-y-1 bg-gradient-to-br from-warning/15 to-warning/5 border-warning/40 hover:border-warning/70 group cursor-pointer">
+                <p className="text-warning font-semibold text-sm flex items-center gap-2 group-hover:text-warning transition-colors">📊 Data Exposure</p>
                 <p className="text-subtle text-xs">Your API probably leaks more than you think. IDs, user data, payment info. Most apps don't validate properly.</p>
               </div>
-              <div className="card p-4 space-y-1 bg-gradient-to-br from-accent/10 to-transparent border-accent/30 hover:border-accent/50 group cursor-pointer">
-                <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-accent transition-colors">💰 Business Logic</p>
+              <div className="card-stagger card p-4 space-y-1 bg-gradient-to-br from-accent/15 to-accent/5 border-accent/40 hover:border-accent/70 group cursor-pointer">
+                <p className="text-accent font-semibold text-sm flex items-center gap-2 group-hover:text-accentLight transition-colors">💰 Business Logic</p>
                 <p className="text-subtle text-xs">Can users skip payment? Duplicate orders? Access admin features? Most apps have at least one.</p>
               </div>
             </div>
@@ -57,13 +57,13 @@ export default function HomePage() {
         <section className="section-shell pt-6">
           <div className="max-w-4xl mx-auto">
             <div className="grid gap-3 sm:grid-cols-2">
-              <div className="card p-4 space-y-2 bg-gradient-to-br from-accent/15 to-accent/5 border-accent/40 hover:border-accent/70 group">
-                <p className="text-textBright font-semibold flex items-center gap-2 group-hover:text-accent transition-colors">⏳ Why now</p>
+              <div className="card-stagger card p-4 space-y-2 bg-gradient-to-br from-accent/15 to-accent/5 border-accent/40 hover:border-accent/70 group">
+                <p className="text-accent font-semibold flex items-center gap-2 group-hover:text-accentLight transition-colors">⏳ Why now</p>
                 <p className="text-subtle text-sm">Waiting invites breaches. See why timing matters.</p>
                 <CTAButton href="/why-now" variant="secondary">Read why now</CTAButton>
               </div>
-              <div className="card p-4 space-y-2 bg-gradient-to-br from-accent/15 to-accent/5 border-accent/40 hover:border-accent/70 group">
-                <p className="text-textBright font-semibold flex items-center gap-2 group-hover:text-accent transition-colors">📄 What you get</p>
+              <div className="card-stagger card p-4 space-y-2 bg-gradient-to-br from-accent/15 to-accent/5 border-accent/40 hover:border-accent/70 group">
+                <p className="text-accent font-semibold flex items-center gap-2 group-hover:text-accentLight transition-colors">📄 What you get</p>
                 <p className="text-subtle text-sm">See the report structure and post-test support.</p>
                 <CTAButton href="/what-you-get" variant="secondary">See deliverables</CTAButton>
               </div>
@@ -92,19 +92,19 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-text mb-6">This isn't a vulnerability scan. It's a real security assessment:</p>
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="card">
+              <div className="card-stagger card">
                 <p className="font-semibold text-lg text-text">Every user-facing feature</p>
                 <p className="text-subtle mt-1 text-sm">Forms, workflows, and edge cases. I test like a real user and an attacker.</p>
               </div>
-              <div className="card">
+              <div className="card-stagger card">
                 <p className="font-semibold text-lg text-text">All API endpoints</p>
                 <p className="text-subtle mt-1 text-sm">Hidden endpoints, unauthenticated access, and privilege escalation paths.</p>
               </div>
-              <div className="card">
+              <div className="card-stagger card">
                 <p className="font-semibold text-lg text-text">Authentication & authorization</p>
                 <p className="text-subtle mt-1 text-sm">Session handling, token validation, and account isolation.</p>
               </div>
-              <div className="card">
+              <div className="card-stagger card">
                 <p className="font-semibold text-lg text-text">Business logic</p>
                 <p className="text-subtle mt-1 text-sm">How users interact with your system. Can they abuse pricing, orders, or workflows?</p>
               </div>
@@ -114,25 +114,28 @@ export default function HomePage() {
         </Section>
 
         {/* Sample Report Preview */}
-        <Section id="sample-report" title="See a real sample report" eyebrow="Skill-based proof">
+        <Section id="sample-report" title="See a Real Security Report" eyebrow="">
           <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-lg text-text">I run a full assessment against a demo app (example-app.test) so you can see the exact deliverable.</p>
+            <p className="text-lg text-text">This is the exact report format you'll receive. Before attackers find these issues for you.</p>
+            <p className="text-text">I run a full manual assessment against a controlled demo application so you can see how real security problems are documented clearly, without noise or filler.</p>
+            <p className="text-lg text-textBright font-semibold">Inside the sample report:</p>
             <Checklist
               items={[
-                "Redacted PDF with real findings: auth bypass, IDOR, and business logic flaws",
-                "Impact, likelihood, and clear reproduction steps for each issue",
-                "Screenshots and HTTP traces so engineers can fix fast"
+                "Real, exploitable issues that affect users, data, and revenue",
+                "Clear explanation of what's at risk and why it matters",
+                "Reproduction details your engineers can act on immediately",
+                "No scanner screenshots. No false positives. Just real findings."
               ]}
             />
             <div className="flex flex-col sm:flex-row gap-3">
-              <CTAButton href="/#contact">Request the sample report</CTAButton>
-              <CTAButton href="/what-you-get" variant="secondary">See deliverables</CTAButton>
+              <CTAButton href="/sample-pentest-report.pdf">Download sample report (PDF)</CTAButton>
+              <CTAButton href="/#contact" variant="secondary">Request a security assessment</CTAButton>
             </div>
           </div>
         </Section>
 
         {/* Who This Is For */}
-        <Section id="who-for" title="Who this is for" eyebrow="Self-qualify fast">
+        <Section id="who-for" title="Who this is for" eyebrow="">
           <div className="max-w-3xl mx-auto space-y-6">
             <Checklist
               items={[
@@ -218,7 +221,7 @@ export default function HomePage() {
         <Section id="next-steps" title="What happens after you contact me" eyebrow="">
           <div className="max-w-3xl mx-auto">
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="card">
+              <div className="card-stagger card">
                 <p className="font-semibold text-lg text-text">Before the test</p>
                 <ul className="text-subtle mt-3 text-sm space-y-2">
                   <li>We scope it out. What parts matter to test.</li>
@@ -227,7 +230,7 @@ export default function HomePage() {
                   <li>No commitment. This is just a test.</li>
                 </ul>
               </div>
-              <div className="card">
+              <div className="card-stagger card">
                 <p className="font-semibold text-lg text-text">The report</p>
                 <ul className="text-subtle mt-3 text-sm space-y-2">
                   <li>Detailed findings with how each vulnerability works</li>
