@@ -22,7 +22,7 @@ export default function ContactPage() {
     });
 
     if (res.ok) {
-      setStatus("Thanks — I’ll reply within one business day.");
+      setStatus("Thanks. I'll reply within one business day.");
       form.reset();
     } else {
       setStatus("Could not send. Please email hi@jalwan.app.");
@@ -33,7 +33,7 @@ export default function ContactPage() {
     <>
       <Header />
       <main>
-        <Section title="Request a Security Audit" eyebrow="Quick form — I’ll reply within one business day">
+        <Section title="Request a Security Audit" eyebrow="Quick form. I'll reply within one business day">
           <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-start">
             <form className="card space-y-5" onSubmit={handleSubmit}>
               <input type="text" name="company" placeholder="Company" className="hidden" aria-hidden />

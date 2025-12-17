@@ -200,7 +200,7 @@ export default function HomePage() {
                   <li>Detailed findings with how each vulnerability works</li>
                   <li>Real exploits, not theoretical warnings</li>
                   <li>Clear explanation of what's at risk</li>
-                  <li>No step-by-step fixes—that's your team's work</li>
+                  <li>No step-by-step fixes. That's your team's work.</li>
                 </ul>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function HomePage() {
         <section className="section-shell">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-semibold text-text">Get a clear picture of your security</h2>
-            <p className="text-subtle text-lg max-w-2xl mx-auto">A manual penetration test reveals what's actually exposed. No panic, no false positives—just real findings and context.</p>
+            <p className="text-subtle text-lg max-w-2xl mx-auto">A manual penetration test reveals what's actually exposed. No panic, no false positives. Just real findings and context.</p>
             <CTAButton href="/#contact">Schedule an Assessment</CTAButton>
             <p className="text-sm text-subtle mt-4">Questions first? <a href="/faq" className="text-accent hover:text-accentMuted">See the FAQ</a></p>
           </div>
