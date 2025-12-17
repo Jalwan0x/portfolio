@@ -14,14 +14,14 @@ export default function HomePage() {
         <section className="section-shell pb-8 pt-20">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="font-display text-4xl sm:text-6xl font-semibold text-textBright leading-tight animate-slideUp">
-              Hackers are trying to break your web application right now
+              Know what's exposed before someone else does
             </h1>
             <p className="text-xl text-subtle max-w-2xl mx-auto leading-relaxed animate-slideUp" style={{ animationDelay: '0.1s' }}>
-              I find what they'll find. I test like an attacker. Then I show you how to fix it before someone malicious does.
+              A manual penetration test reveals how your application can be abused—and what actually matters to fix.
             </p>
             <div className="flex flex-col items-center gap-4 pt-4 animate-slideUp" style={{ animationDelay: '0.2s' }}>
               <CTAButton href="/#contact">Request Penetration Test</CTAButton>
-              <p className="text-sm text-subtle">I don't rush tests.</p>
+              <p className="text-sm text-subtle">No obligation to hire me after the assessment.</p>
             </div>
           </div>
         </section>
@@ -38,16 +38,16 @@ export default function HomePage() {
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="card p-4 space-y-1 bg-gradient-to-br from-danger/10 to-transparent border-danger/30 hover:border-danger/50 group cursor-pointer">
-                <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-danger transition-colors">⚠️ Auth takeover</p>
-                <p className="text-subtle text-xs">Weak resets + sloppy tokens = attackers log in as anyone.</p>
+                <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-danger transition-colors">🔐 Account Access</p>
+                <p className="text-subtle text-xs">Can attackers access other user accounts? Weak authentication and token handling expose this.</p>
               </div>
               <div className="card p-4 space-y-1 bg-gradient-to-br from-warning/10 to-transparent border-warning/30 hover:border-warning/50 group cursor-pointer">
-                <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-warning transition-colors">🕵️ Data leaks</p>
-                <p className="text-subtle text-xs">Predictable IDs, no rate limits, sensitive data just spills out.</p>
+                <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-warning transition-colors">📊 Data Exposure</p>
+                <p className="text-subtle text-xs">Who can access what? Missing rate limits and broken API logic can leak user data.</p>
               </div>
               <div className="card p-4 space-y-1 bg-gradient-to-br from-accent/10 to-transparent border-accent/30 hover:border-accent/50 group cursor-pointer">
-                <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-accent transition-colors">💸 Payment bypass</p>
-                <p className="text-subtle text-xs">Checkout logic flaws that let users skip paying or steal credits.</p>
+                <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-accent transition-colors">💰 Business Logic</p>
+                <p className="text-subtle text-xs">Can users skip payment, edit orders, or abuse workflows? Business logic flaws are common.</p>
               </div>
             </div>
           </div>
@@ -72,59 +72,59 @@ export default function HomePage() {
         </section>
 
         {/* What This Testing Is Used For */}
-        <Section id="value" title="What vulnerabilities actually cost you" eyebrow="">
+        <Section id="value" title="What a web penetration test covers" eyebrow="">
           <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-lg text-text">Here's what I find in nearly every application I test:</p>
+            <p className="text-lg text-text">Manual testing reveals real exposure that tools miss:</p>
             <Checklist
               items={[
-                "Attackers accessing user accounts (broken authentication)",
-                "Data leaking through APIs (no rate limits, bad validation)",
-                "Users bypassing payments or stealing credits",
-                "Admin features accessible to regular users"
+                "Who can access what. Authentication and session handling flaws.",
+                "Where data flows through your application and how it's protected.",
+                "Business logic abuse—can users skip payment, edit orders, or escalate privileges?",
+                "API endpoints and workflows that automated scanners never test."
               ]}
             />
-            <p className="text-subtle text-base italic mt-6">These aren't theoretical. They're in your web application right now.</p>
+            <p className="text-subtle text-base italic mt-6">The goal: understand your real exposure, not just your assumptions.</p>
           </div>
         </Section>
 
         {/* The Service */}
-        <Section id="service" title="What I actually do" eyebrow="">
+        <Section id="service" title="The assessment is comprehensive" eyebrow="">
           <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-text mb-6">One comprehensive assessment covering:</p>
+            <p className="text-lg text-text mb-6">This isn't a vulnerability scan. It's a real security assessment:</p>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="card">
-                <p className="font-semibold text-lg text-text">Every page, form, and workflow</p>
-                <p className="text-subtle mt-1 text-sm">The stuff automated scanners miss</p>
+                <p className="font-semibold text-lg text-text">Every user-facing feature</p>
+                <p className="text-subtle mt-1 text-sm">Forms, workflows, and edge cases. I test like a real user and an attacker.</p>
               </div>
               <div className="card">
-                <p className="font-semibold text-lg text-text">Your entire API surface</p>
-                <p className="text-subtle mt-1 text-sm">Including the endpoints you forgot existed</p>
+                <p className="font-semibold text-lg text-text">All API endpoints</p>
+                <p className="text-subtle mt-1 text-sm">Hidden endpoints, unauthenticated access, and privilege escalation paths.</p>
               </div>
               <div className="card">
-                <p className="font-semibold text-lg text-text">Auth & session handling</p>
-                <p className="text-subtle mt-1 text-sm">JWT, OAuth, cookies, the works</p>
+                <p className="font-semibold text-lg text-text">Authentication & authorization</p>
+                <p className="text-subtle mt-1 text-sm">Session handling, token validation, and account isolation.</p>
               </div>
               <div className="card">
-                <p className="font-semibold text-lg text-text">Business logic abuse</p>
-                <p className="text-subtle mt-1 text-sm">The creative attacks scanners never find</p>
+                <p className="font-semibold text-lg text-text">Business logic</p>
+                <p className="text-subtle mt-1 text-sm">How users interact with your system. Can they abuse pricing, orders, or workflows?</p>
               </div>
             </div>
-            <p className="text-center text-subtle text-base mt-8">You get one brutally honest report. That's it.</p>
+            <p className="text-center text-subtle text-base mt-8">You get a detailed report with findings and context. No fix instructions—you own the remediation.</p>
           </div>
         </Section>
 
         {/* Why Choose Me */}
-        <Section id="authority" title="Why me?" eyebrow="">
+        <Section id="authority" title="Why choose manual testing" eyebrow="">
           <div className="max-w-3xl mx-auto space-y-6">
             <Checklist
               items={[
-                "Active bug bounty hunter with valid reports on major platforms",
-                "I don't use automated scanners that flag false positives. Everything is manual.",
-                "Deep knowledge of OWASP Top 10 and real-world attack vectors",
-                "Fast turnaround with detailed, actionable remediation steps"
+                "I test manually. No automated scanners generating false positives.",
+                "Active bug bounty hunter on HackerOne and Bugcrowd. Real findings, not noise.",
+                "I understand business logic and user flows, not just technical vulnerabilities.",
+                "Clear, specific findings with context. You understand what's actually wrong."
               ]}
             />
-            <p className="text-subtle text-base italic mt-6">Real attackers work manually. That's how I work too.</p>
+            <p className="text-subtle text-base italic mt-6">Manual testing finds what matters. Automated tools find what sounds scary.</p>
           </div>
         </Section>
 
@@ -176,36 +176,36 @@ export default function HomePage() {
               </table>
             </div>
             <p className="text-center text-subtle text-base mt-8">
-              As an independent researcher, I offer the same quality as enterprise solutions, but faster and at a better price. No overhead. No markup.
+              Tools are cheap and fast but generate noise. Enterprise solutions are thorough but expensive. Manual testing from an independent researcher gives you real findings without the markup.
             </p>
           </div>
         </Section>
 
-        {/* Guarantee & Timing */}
-        <Section id="guarantee" title="What you're actually paying for" eyebrow="">
+        {/* Next Steps */}
+        <Section id="next-steps" title="What happens after you contact me" eyebrow="">
           <div className="max-w-3xl mx-auto">
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="card">
-                <p className="font-semibold text-lg text-text">Timeline</p>
+                <p className="font-semibold text-lg text-text">Before the test</p>
                 <ul className="text-subtle mt-3 text-sm space-y-2">
-                  <li><span className="text-accent">Day 0:</span> Scope & access</li>
-                  <li><span className="text-accent">Days 1-6+:</span> Thorough web-application testing</li>
-                  <li><span className="text-accent">7-14 days:</span> You get the report</li>
-                  <li>Depends on app complexity. Simple apps: 7 days. Complex ones: up to 2 weeks.</li>
+                  <li>We discuss scope: which parts of your app to test</li>
+                  <li>You give me access (or staging environment)</li>
+                  <li>Clear timeline: 7-14 days depending on complexity</li>
+                  <li>You're not locked in—this is just an assessment</li>
                 </ul>
               </div>
               <div className="card">
-                <p className="font-semibold text-lg text-text">The Guarantee</p>
+                <p className="font-semibold text-lg text-text">The report</p>
                 <ul className="text-subtle mt-3 text-sm space-y-2">
-                  <li>I will find at least 3-5 real issues</li>
-                  <li>Not theoretical. Exploitable.</li>
-                  <li>No false positives. Everything is confirmed.</li>
-                  <li>If your web application is reasonably complex, I will find vulnerabilities.</li>
+                  <li>Detailed findings with how each vulnerability works</li>
+                  <li>Real exploits, not theoretical warnings</li>
+                  <li>Clear explanation of what's at risk</li>
+                  <li>No step-by-step fixes—that's your team's work</li>
                 </ul>
               </div>
             </div>
-            <p className="text-center text-subtle text-base mt-8 italic">
-              Every app has problems. The question is who finds them first.
+            <p className="text-center text-subtle text-base mt-8">
+              Most applications have real security issues. The best time to find them is before an attacker does.
             </p>
           </div>
         </Section>
@@ -213,10 +213,10 @@ export default function HomePage() {
         {/* Final CTA */}
         <section className="section-shell">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-semibold text-text">Ready to know what's actually wrong?</h2>
-            <p className="text-subtle text-lg max-w-2xl mx-auto">Stop guessing. Get a real security assessment from someone who tests like attackers actually do.</p>
-            <CTAButton href="/#contact">Request Your Test</CTAButton>
-            <p className="text-sm text-subtle mt-4">Have questions? <a href="/faq" className="text-accent hover:text-accentMuted">Check the FAQ</a></p>
+            <h2 className="text-3xl font-semibold text-text">Get a clear picture of your security</h2>
+            <p className="text-subtle text-lg max-w-2xl mx-auto">A manual penetration test reveals what's actually exposed. No panic, no false positives—just real findings and context.</p>
+            <CTAButton href="/#contact">Schedule an Assessment</CTAButton>
+            <p className="text-sm text-subtle mt-4">Questions first? <a href="/faq" className="text-accent hover:text-accentMuted">See the FAQ</a></p>
           </div>
         </section>
 
