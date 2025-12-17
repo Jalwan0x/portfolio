@@ -17,7 +17,7 @@ export default function HomePage() {
               Know what's exposed before someone else does
             </h1>
             <p className="text-xl text-subtle max-w-2xl mx-auto leading-relaxed animate-slideUp" style={{ animationDelay: '0.1s' }}>
-              A manual penetration test reveals how your application can be abused—and what actually matters to fix.
+              Manual testing shows you exactly how your app can be broken. What most companies don't know until it's too late.
             </p>
             <div className="flex flex-col items-center gap-4 pt-4 animate-slideUp" style={{ animationDelay: '0.2s' }}>
               <CTAButton href="/#contact">Request Penetration Test</CTAButton>
@@ -39,15 +39,15 @@ export default function HomePage() {
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="card p-4 space-y-1 bg-gradient-to-br from-danger/10 to-transparent border-danger/30 hover:border-danger/50 group cursor-pointer">
                 <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-danger transition-colors">🔐 Account Access</p>
-                <p className="text-subtle text-xs">Can attackers access other user accounts? Weak authentication and token handling expose this.</p>
+                <p className="text-subtle text-xs">Authentication is broken in most apps. Can attackers log in as your users? They usually can.</p>
               </div>
               <div className="card p-4 space-y-1 bg-gradient-to-br from-warning/10 to-transparent border-warning/30 hover:border-warning/50 group cursor-pointer">
                 <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-warning transition-colors">📊 Data Exposure</p>
-                <p className="text-subtle text-xs">Who can access what? Missing rate limits and broken API logic can leak user data.</p>
+                <p className="text-subtle text-xs">Your API probably leaks more than you think. IDs, user data, payment info. Most apps don't validate properly.</p>
               </div>
               <div className="card p-4 space-y-1 bg-gradient-to-br from-accent/10 to-transparent border-accent/30 hover:border-accent/50 group cursor-pointer">
                 <p className="text-textBright font-semibold text-sm flex items-center gap-2 group-hover:text-accent transition-colors">💰 Business Logic</p>
-                <p className="text-subtle text-xs">Can users skip payment, edit orders, or abuse workflows? Business logic flaws are common.</p>
+                <p className="text-subtle text-xs">Can users skip payment? Duplicate orders? Access admin features? Most apps have at least one.</p>
               </div>
             </div>
           </div>
@@ -72,18 +72,18 @@ export default function HomePage() {
         </section>
 
         {/* What This Testing Is Used For */}
-        <Section id="value" title="What a web penetration test covers" eyebrow="">
+        <Section id="value" title="What a web penetration test actually shows" eyebrow="">
           <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-lg text-text">Manual testing reveals real exposure that tools miss:</p>
+            <p className="text-lg text-text">You probably think your app is secure. Most founders do. Here's what testing usually finds:</p>
             <Checklist
               items={[
-                "Who can access what. Authentication and session handling flaws.",
-                "Where data flows through your application and how it's protected.",
-                "Business logic abuse—can users skip payment, edit orders, or escalate privileges?",
-                "API endpoints and workflows that automated scanners never test."
+                "Who can access what. Authentication flaws are in almost every app.",
+                "Data you thought was private. Broken APIs and missing validation leak it.",
+                "Business logic abuse. Users can often do things you never intended.",
+                "Endpoints you forgot existed. The features that ship with bugs."
               ]}
             />
-            <p className="text-subtle text-base italic mt-6">The goal: understand your real exposure, not just your assumptions.</p>
+            <p className="text-subtle text-base italic mt-6">Unknown doesn't mean safe. It just means you haven't tested it yet.</p>
           </div>
         </Section>
 
@@ -109,22 +109,22 @@ export default function HomePage() {
                 <p className="text-subtle mt-1 text-sm">How users interact with your system. Can they abuse pricing, orders, or workflows?</p>
               </div>
             </div>
-            <p className="text-center text-subtle text-base mt-8">You get a detailed report with findings and context. No fix instructions—you own the remediation.</p>
+            <p className="text-center text-subtle text-base mt-8">You get a detailed report with findings and context. You handle the fixes yourself.</p>
           </div>
         </Section>
 
         {/* Why Choose Me */}
-        <Section id="authority" title="Why choose manual testing" eyebrow="">
+        <Section id="authority" title="Why manual testing matters" eyebrow="">
           <div className="max-w-3xl mx-auto space-y-6">
             <Checklist
               items={[
-                "I test manually. No automated scanners generating false positives.",
-                "Active bug bounty hunter on HackerOne and Bugcrowd. Real findings, not noise.",
-                "I understand business logic and user flows, not just technical vulnerabilities.",
-                "Clear, specific findings with context. You understand what's actually wrong."
+                "Manual testing finds what scanners miss. Real vulnerabilities, not false alarms.",
+                "I hunt bugs on HackerOne and Bugcrowd. Same skillset, now testing your app.",
+                "I understand what hackers actually care about. Not technical frameworks, real impact.",
+                "You get clear findings. No noise, no CYA reports."
               ]}
             />
-            <p className="text-subtle text-base italic mt-6">Manual testing finds what matters. Automated tools find what sounds scary.</p>
+            <p className="text-subtle text-base italic mt-6">Automated tools are cheap. That's why they're wrong so often.</p>
           </div>
         </Section>
 
@@ -176,7 +176,7 @@ export default function HomePage() {
               </table>
             </div>
             <p className="text-center text-subtle text-base mt-8">
-              Tools are cheap and fast but generate noise. Enterprise solutions are thorough but expensive. Manual testing from an independent researcher gives you real findings without the markup.
+              Cheap scanners find noise. Expensive agencies take months. Manual testing from someone who actually finds bugs gives you real answers.
             </p>
           </div>
         </Section>
@@ -188,10 +188,10 @@ export default function HomePage() {
               <div className="card">
                 <p className="font-semibold text-lg text-text">Before the test</p>
                 <ul className="text-subtle mt-3 text-sm space-y-2">
-                  <li>We discuss scope: which parts of your app to test</li>
-                  <li>You give me access (or staging environment)</li>
-                  <li>Clear timeline: 7-14 days depending on complexity</li>
-                  <li>You're not locked in—this is just an assessment</li>
+                  <li>We scope it out. What parts matter to test.</li>
+                  <li>You give me access to the app or staging environment</li>
+                  <li>7 to 14 days depending on how complex your app is</li>
+                  <li>No commitment. This is just a test.</li>
                 </ul>
               </div>
               <div className="card">
