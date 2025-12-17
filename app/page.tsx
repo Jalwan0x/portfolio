@@ -113,18 +113,51 @@ export default function HomePage() {
           </div>
         </Section>
 
+        {/* Sample Report Preview */}
+        <Section id="sample-report" title="See a real sample report" eyebrow="Skill-based proof">
+          <div className="max-w-3xl mx-auto space-y-6">
+            <p className="text-lg text-text">I run a full assessment against a demo app (example-app.test) so you can see the exact deliverable.</p>
+            <Checklist
+              items={[
+                "Redacted PDF with real findings: auth bypass, IDOR, and business logic flaws",
+                "Impact, likelihood, and clear reproduction steps for each issue",
+                "Screenshots and HTTP traces so engineers can fix fast"
+              ]}
+            />
+            <div className="flex flex-col sm:flex-row gap-3">
+              <CTAButton href="/#contact">Request the sample report</CTAButton>
+              <CTAButton href="/what-you-get" variant="secondary">See deliverables</CTAButton>
+            </div>
+          </div>
+        </Section>
+
+        {/* Who This Is For */}
+        <Section id="who-for" title="Who this is for" eyebrow="Self-qualify fast">
+          <div className="max-w-3xl mx-auto space-y-6">
+            <Checklist
+              items={[
+                "Early-stage startups before launch that want to avoid public leaks",
+                "SaaS products handling user data and payments",
+                "Teams that want manual testing, not automated scanner reports",
+                "Founders who want real issues surfaced, not paperwork"
+              ]}
+            />
+            <p className="text-subtle text-base italic">I only take a small number of clients so I can go deep instead of rushing scans.</p>
+          </div>
+        </Section>
+
         {/* Why Choose Me */}
         <Section id="authority" title="Why manual testing matters" eyebrow="">
           <div className="max-w-3xl mx-auto space-y-6">
             <Checklist
               items={[
                 "Manual testing finds what scanners miss. Real vulnerabilities, not false alarms.",
-                "I test web apps for a living. Same skills as finding bugs, now working for you.",
-                "I understand what hackers actually care about. Not technical frameworks, real impact.",
+                "Found authentication bypass issues during independent research.",
+                "Identified high-risk vulnerabilities in production-grade applications.",
                 "You get clear findings. No noise, no CYA reports."
               ]}
             />
-            <p className="text-subtle text-base italic mt-6">Automated tools are cheap. That's why they're wrong so often.</p>
+            <p className="text-subtle text-base italic mt-6">I'm onboarding my first private clients now. You get direct access and focused testing. No middlemen.</p>
           </div>
         </Section>
 
