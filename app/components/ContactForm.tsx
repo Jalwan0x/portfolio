@@ -16,6 +16,7 @@ export function ContactForm() {
       name: formData.get("name") as string,
       email: formData.get("email") as string,
       url: formData.get("url") as string,
+      message: formData.get("message") as string,
     };
 
     try {
@@ -77,6 +78,16 @@ export function ContactForm() {
             disabled={status === "loading"}
             className="w-full rounded-lg bg-white/8 border border-white/25 px-4 py-3 text-text placeholder-subtle/50 focus:outline-none focus:ring-2 focus:ring-accent focus:bg-white/12 disabled:opacity-50"
             placeholder="https://your-app.com"
+          />
+        </label>
+        <label className="space-y-2 text-sm block">
+          <span className="text-subtle">Message (optional)</span>
+          <textarea
+            name="message"
+            disabled={status === "loading"}
+            className="w-full rounded-lg bg-white/8 border border-white/25 px-4 py-3 text-text placeholder-subtle/50 focus:outline-none focus:ring-2 focus:ring-accent focus:bg-white/12 disabled:opacity-50 resize-none"
+            placeholder="Tell me more about your project..."
+            rows={4}
           />
         </label>
         <button type="submit" className="btn-primary w-full" disabled={status === "loading"}>
