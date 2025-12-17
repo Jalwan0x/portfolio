@@ -47,10 +47,7 @@ export function PDFDownloadButton() {
             Downloaded!
           </>
         ) : (
-          <>
-            <span>📥</span>
-            Download sample report (PDF)
-          </>
+          "Download sample report (PDF)"
         )}
       </button>
 
