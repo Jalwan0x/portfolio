@@ -4,6 +4,7 @@ import { Checklist } from "./components/Checklist";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { ContactForm } from "./components/ContactForm";
+import { PDFDownloadButton } from "./components/PDFDownloadButton";
 
 export default function HomePage() {
   return (
@@ -128,7 +129,7 @@ export default function HomePage() {
               ]}
             />
             <div className="flex flex-col sm:flex-row gap-3">
-              <CTAButton href="/sample-pentest-report.pdf">Download sample report (PDF)</CTAButton>
+              <PDFDownloadButton />
               <CTAButton href="/#contact" variant="secondary">Request a security assessment</CTAButton>
             </div>
           </div>
