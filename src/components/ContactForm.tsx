@@ -19,7 +19,7 @@ const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name is too long"),
   email: z.string().trim().email("Please enter a valid email").max(255, "Email is too long"),
   appUrl: z.string().trim().url("Please enter a valid URL").max(500, "URL is too long"),
-  description: z.string().trim().min(1, "Please provide a brief description").max(2000, "Description is too long"),
+  description: z.string().trim().max(2000, "Description is too long").optional(),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
