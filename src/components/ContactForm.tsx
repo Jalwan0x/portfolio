@@ -64,7 +64,7 @@ const ContactForm = () => {
     
     try {
       // Updated to use production backend endpoint
-      const response = await fetch("http://api.jalwan.app/api/contact", {
+      const response = await fetch("https://api.jalwan.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
