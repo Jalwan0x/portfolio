@@ -63,8 +63,8 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Change the URL below to match your backend's contact endpoint
-      const response = await fetch("http://localhost:5000/api/contact", {
+      // Updated to use production backend endpoint
+      const response = await fetch("http://api.jalwan.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
