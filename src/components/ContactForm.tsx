@@ -64,12 +64,15 @@ const ContactForm = () => {
     
     try {
       // Updated to use production backend endpoint
+      // Map appUrl to url for backend compatibility
+      const payload = { ...formData, url: formData.appUrl };
+      delete payload.appUrl;
       const response = await fetch("https://api.jalwan.app/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
       if (!response.ok) {
         throw new Error("Failed to send message");
