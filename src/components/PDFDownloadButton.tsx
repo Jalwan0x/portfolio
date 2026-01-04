@@ -40,7 +40,7 @@ const PDFDownloadButton = () => {
     <>
       <button
         onClick={handleDownload}
-        className="w-full sm:w-auto inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-primary-foreground font-semibold shadow hover:bg-primary/90 transition-colors text-base mt-4 focus:outline-none focus:ring-2 focus:ring-primary/50"
+        className="w-full sm:w-auto inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-primary-foreground font-semibold shadow hover:bg-primary/90 transition-colors text-base mt-4 focus:outline-none focus:ring-2 focus:ring-primary/50 justify-center"
         style={{ maxWidth: 400 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
