@@ -30,7 +30,7 @@ const testAreas = [
   {
     icon: Globe2,
     title: "Others",
-    description: "Common vulnerabilities, full website data leak, misconfigurations, and more",
+    description: "Hidden edge cases most teams never test",
   },
 ];
 
