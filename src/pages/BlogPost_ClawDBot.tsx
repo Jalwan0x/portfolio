@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft, Copy, Check, Terminal, AlertCircle, CheckCircle } from "lucide-react";
@@ -43,6 +44,62 @@ const ClawDBotInstallation = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>How to Install Moltbot in 5 Minutes (Complete Guide 2026)</title>
+        <meta name="description" content="Step-by-step guide to install Moltbot, your personal AI assistant that runs locally. Connect to WhatsApp, Telegram, Discord, and more. Works on Mac, Windows, and Linux." />
+        <meta name="keywords" content="Moltbot, ClawDBot, AI assistant, personal AI, local AI, install Moltbot, AI chat bot, WhatsApp AI, Telegram bot, Discord bot, Claude AI, GPT assistant" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="How to Install Moltbot in 5 Minutes | Complete Setup Guide" />
+        <meta property="og:description" content="Get your personal AI assistant running locally in minutes. Moltbot connects to WhatsApp, Telegram, Discord, and more—all running on YOUR machine." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://jalwan.app/blog/how-to-install-clawdbot" />
+        <meta property="article:published_time" content="2026-01-29T00:00:00Z" />
+        <meta property="article:author" content="Jalwan" />
+        <meta property="article:section" content="Tutorial" />
+        <meta property="article:tag" content="AI" />
+        <meta property="article:tag" content="Automation" />
+        <meta property="article:tag" content="Tutorial" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="How to Install Moltbot: Personal AI Assistant Guide" />
+        <meta name="twitter:description" content="Install Moltbot in 5 minutes. Local AI assistant that works with WhatsApp, Telegram, Discord. Privacy-first, open source, fully extensible." />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://jalwan.app/blog/how-to-install-clawdbot" />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TechArticle",
+            "headline": "How to Install Moltbot in 5 Minutes (Step-by-Step Guide)",
+            "description": "Get your personal AI assistant running locally on your machine with this comprehensive installation guide—works on Mac, Windows, and Linux.",
+            "image": "https://jalwan.app/favicon.svg",
+            "author": {
+              "@type": "Person",
+              "name": "Jalwan"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Jalwan",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://jalwan.app/favicon.svg"
+              }
+            },
+            "datePublished": "2026-01-29",
+            "dateModified": "2026-01-29",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://jalwan.app/blog/how-to-install-clawdbot"
+            },
+            "articleSection": "Tutorial",
+            "keywords": "Moltbot, AI assistant, personal AI, local AI, installation guide, WhatsApp bot, Telegram bot"
+          })}
+        </script>
+      </Helmet>
       <Header />
       <main className="pt-24 pb-16">
         <article className="container max-w-3xl">

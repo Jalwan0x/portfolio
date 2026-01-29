@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 import { Shield, Calendar, Clock, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -27,6 +28,25 @@ const blogPosts: BlogPost[] = [
 const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Security Blog | Practical Guides & Insights | Jalwan</title>
+        <meta name="description" content="Security insights, practical guides, and tips for building secure SaaS applications. Learn about AI assistants, automation, and security best practices." />
+        <meta name="keywords" content="security blog, SaaS security, AI tutorials, Moltbot, security guides, application security" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Security Blog | Jalwan" />
+        <meta property="og:description" content="Practical guides and security insights for SaaS applications" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://jalwan.app/blog" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Security Blog | Jalwan" />
+        <meta name="twitter:description" content="Security insights and practical guides for building secure applications" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://jalwan.app/blog" />
+      </Helmet>
       <Header />
       <main className="pt-24 pb-16">
         <div className="container">
