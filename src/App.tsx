@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import BlogPostClawDBot from "./pages/BlogPost_ClawDBot";
+import BlogPostPromptInjection from "./pages/BlogPost_PromptInjection";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/how-to-install-clawdbot" element={<BlogPostClawDBot />} />
+            <Route path="/blog/prompt-injection-attacks" element={<BlogPostPromptInjection />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -16,6 +16,14 @@ export interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "prompt-injection-attacks",
+    title: "Prompt Injection Attacks: What They Are & How to Stop Them",
+    excerpt: "Real-world examples of prompt injection attacks against AI assistants and practical defenses to protect your applications. Essential security knowledge for anyone building with LLMs.",
+    publishDate: "January 29, 2026",
+    readTime: "8 min read",
+    category: "Security"
+  },
+  {
     slug: "how-to-install-clawdbot",
     title: "How to Install Moltbot in 5 Minutes (Step-by-Step Guide)",
     excerpt: "Get your personal AI assistant running locally on your machine. Works on Mac, Windows, and Linux. Connect to WhatsApp, Telegram, Discord, and more.",
