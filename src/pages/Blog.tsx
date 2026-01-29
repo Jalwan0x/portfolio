@@ -16,8 +16,8 @@ export interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     slug: "how-to-install-clawdbot",
-    title: "How to Install ClawDBot in 5 Minutes (Step-by-Step Guide)",
-    excerpt: "Get ClawDBot running on your system quickly with this comprehensive installation guide, including common troubleshooting solutions.",
+    title: "How to Install Moltbot in 5 Minutes (Step-by-Step Guide)",
+    excerpt: "Get your personal AI assistant running locally on your machine—works on Mac, Windows, and Linux. Connect to WhatsApp, Telegram, Discord, and more.",
     publishDate: "January 29, 2026",
     readTime: "5 min read",
     category: "Tutorial"

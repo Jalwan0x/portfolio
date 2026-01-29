@@ -67,11 +67,11 @@ const ClawDBotInstallation = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-heading leading-[1.1] mb-6 heading-display">
-              How to Install ClawDBot in 5 Minutes (Step-by-Step Guide)
+              How to Install Moltbot in 5 Minutes (Step-by-Step Guide)
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Get ClawDBot running on your system quickly with this comprehensive installation guide, including common troubleshooting solutions.
+              Get your personal AI assistant running locally on your machine with this comprehensive installation guide—works on Mac, Windows, and Linux.
             </p>
           </header>
 
@@ -79,11 +79,20 @@ const ClawDBotInstallation = () => {
           <div className="prose prose-lg max-w-none">
             {/* Introduction */}
             <section className="mb-12">
+              <h2 className="text-3xl font-semibold text-heading mb-6 heading-display">
+                What is Moltbot?
+              </h2>
               <p className="text-lg text-foreground leading-relaxed mb-4">
-                Setting up automation tools shouldn't take hours. Most developers waste time fighting installation errors instead of building features.
+                Moltbot is a <strong>personal AI assistant that runs entirely on YOUR machine</strong>. Unlike cloud-based AI tools, your data stays private and local.
               </p>
               <p className="text-lg text-foreground leading-relaxed mb-4">
-                This guide shows you exactly how to install ClawDBot on your system in under 5 minutes—whether you're on Windows, macOS, or Linux.
+                The magic? <strong>One AI assistant across all your chat apps</strong>. Talk to Moltbot on WhatsApp, Telegram, Discord, Slack, Signal, iMessage—it's everywhere you are, powered by Claude or GPT running on your computer.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed mb-4">
+                It's open source (98.5k GitHub stars), fully extensible, and can actually DO things: browse the web, manage files, control your calendar, run shell commands, and more.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed mb-4">
+                This guide shows you exactly how to install Moltbot on your system in under 5 minutes—whether you're on Windows, macOS, or Linux.
               </p>
             </section>
 
@@ -99,13 +108,13 @@ const ClawDBotInstallation = () => {
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <strong className="text-foreground">Node.js</strong>
-                      <span className="text-muted-foreground"> — Version 18.x or higher</span>
+                      <span className="text-muted-foreground"> — Version 22 or higher (required)</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
-                      <strong className="text-foreground">npm or yarn</strong>
+                      <strong className="text-foreground">npm, pnpm, or yarn</strong>
                       <span className="text-muted-foreground"> — Package manager (comes with Node.js)</span>
                     </div>
                   </div>
@@ -113,7 +122,14 @@ const ClawDBotInstallation = () => {
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <strong className="text-foreground">Operating System</strong>
-                      <span className="text-muted-foreground"> — Windows 10+, macOS 11+, or Linux (Ubuntu 20.04+)</span>
+                      <span className="text-muted-foreground"> — macOS, Windows (WSL2 recommended), or Linux</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-foreground">AI API Access</strong>
+                      <span className="text-muted-foreground"> — Claude Pro/Max or ChatGPT subscription (recommended: Claude Opus 4.5)</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -159,22 +175,22 @@ const ClawDBotInstallation = () => {
               <div className="mb-10">
                 <h3 className="text-2xl font-semibold text-heading mb-4 flex items-center gap-2">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">2</span>
-                  Install ClawDBot Globally
+                  Install Moltbot Globally
                 </h3>
                 <p className="text-foreground leading-relaxed mb-4">
-                  Install ClawDBot globally using npm. This makes the <code className="px-2 py-1 bg-muted rounded text-sm font-mono">clawdbot</code> command available system-wide:
+                  Install Moltbot globally using npm. This makes the <code className="px-2 py-1 bg-muted rounded text-sm font-mono">moltbot</code> command available system-wide:
                 </p>
                 <CodeBlock
                   id="install-global"
-                  code="npm install -g clawdbot"
+                  code="npm install -g moltbot@latest"
                 />
                 <div className="bg-accent/50 border border-primary/20 rounded-xl p-5 mt-4">
                   <div className="flex gap-3">
                     <Terminal className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-medium text-foreground mb-1">Using Yarn?</p>
+                      <p className="font-medium text-foreground mb-1">Using pnpm?</p>
                       <p className="text-sm text-muted-foreground">
-                        Run <code className="px-2 py-0.5 bg-background rounded text-xs font-mono">yarn global add clawdbot</code> instead.
+                        Run <code className="px-2 py-0.5 bg-background rounded text-xs font-mono">pnpm add -g moltbot@latest</code> instead.
                       </p>
                     </div>
                   </div>
@@ -185,37 +201,60 @@ const ClawDBotInstallation = () => {
               <div className="mb-10">
                 <h3 className="text-2xl font-semibold text-heading mb-4 flex items-center gap-2">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">3</span>
-                  Verify Installation
+                  Run the Onboarding Wizard
                 </h3>
                 <p className="text-foreground leading-relaxed mb-4">
-                  Check that ClawDBot was installed successfully:
+                  Moltbot includes an interactive wizard that guides you through setup—it handles gateway configuration, workspace setup, channel connections, and AI model authorization:
                 </p>
                 <CodeBlock
-                  id="verify-install"
-                  code="clawdbot --version"
+                  id="onboard"
+                  code="moltbot onboard --install-daemon"
                 />
-                <p className="text-foreground leading-relaxed">
-                  You should see the version number displayed. If you get an error, see the troubleshooting section below.
+                <p className="text-foreground leading-relaxed mb-3">
+                  The wizard will walk you through:
                 </p>
+                <ul className="list-disc list-inside space-y-2 text-foreground ml-4 mb-4">
+                  <li>Choosing your AI model (Claude or GPT)</li>
+                  <li>Setting up OAuth authentication</li>
+                  <li>Configuring your workspace directory</li>
+                  <li>Connecting your first chat channel (WhatsApp, Telegram, etc.)</li>
+                  <li>Installing the gateway daemon (keeps it running 24/7)</li>
+                </ul>
+                <div className="bg-accent/50 border border-primary/20 rounded-xl p-5 mt-4">
+                  <div className="flex gap-3">
+                    <Terminal className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium text-foreground mb-1">Pro Tip</p>
+                      <p className="text-sm text-muted-foreground">
+                        The <code className="px-2 py-0.5 bg-background rounded text-xs font-mono">--install-daemon</code> flag sets up Moltbot as a system service so it starts automatically on boot.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Step 4 */}
               <div className="mb-10">
                 <h3 className="text-2xl font-semibold text-heading mb-4 flex items-center gap-2">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">4</span>
-                  Initialize Your First Project
+                  Start the Gateway
                 </h3>
                 <p className="text-foreground leading-relaxed mb-4">
-                  Navigate to your project directory and initialize ClawDBot:
+                  The Gateway is Moltbot's control plane—it coordinates all channels, sessions, and tools. Start it with:
                 </p>
                 <CodeBlock
-                  id="init-project"
-                  code={`cd your-project-folder
-clawdbot init`}
+                  id="start-gateway"
+                  code="moltbot gateway --port 18789 --verbose"
                 />
-                <p className="text-foreground leading-relaxed">
-                  Follow the interactive prompts to configure your bot. This creates a <code className="px-2 py-1 bg-muted rounded text-sm font-mono">clawdbot.config.js</code> file in your project.
+                <p className="text-foreground leading-relaxed mb-3">
+                  You'll see output showing:
                 </p>
+                <ul className="list-disc list-inside space-y-2 text-foreground ml-4">
+                  <li>Gateway WebSocket server starting on ws://127.0.0.1:18789</li>
+                  <li>Connected chat channels (WhatsApp, Telegram, etc.)</li>
+                  <li>Available tools and capabilities</li>
+                  <li>Control UI accessible at http://localhost:18789</li>
+                </ul>
               </div>
 
               {/* Step 5 */}
@@ -225,14 +264,14 @@ clawdbot init`}
                   Run Initial Security Check
                 </h3>
                 <p className="text-foreground leading-relaxed mb-4">
-                  Before starting, verify everything is configured correctly:
+                  Before connecting channels, verify everything is configured securely:
                 </p>
                 <CodeBlock
                   id="doctor-check"
-                  code="clawdbot doctor"
+                  code="moltbot doctor"
                 />
                 <p className="text-foreground leading-relaxed">
-                  This command checks your installation and identifies any configuration issues. Fix any reported problems before proceeding.
+                  This command checks your installation, validates security settings, and identifies any configuration issues. Fix any reported problems before proceeding.
                 </p>
               </div>
 
@@ -240,18 +279,43 @@ clawdbot init`}
               <div className="mb-10">
                 <h3 className="text-2xl font-semibold text-heading mb-4 flex items-center gap-2">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">6</span>
-                  Start ClawDBot
+                  Send Your First Message
                 </h3>
                 <p className="text-foreground leading-relaxed mb-4">
-                  You're ready! Start ClawDBot with:
+                  You're ready! Open WhatsApp, Telegram, or whatever channel you configured, and message your assistant. Try asking:
                 </p>
                 <CodeBlock
-                  id="start-bot"
-                  code="clawdbot start"
+                  id="first-message"
+                  code={`Hey! What can you do?
+
+What's the weather today?
+
+Create a reminder for my meeting tomorrow at 2pm`}
                 />
-                <p className="text-foreground leading-relaxed">
-                  Your bot is now running. Press <code className="px-2 py-1 bg-muted rounded text-sm font-mono">Ctrl+C</code> to stop it.
+                <p className="text-foreground leading-relaxed mb-3">
+                  Moltbot will respond with its capabilities and handle your requests. You can also use the CLI to send messages:
                 </p>
+                <CodeBlock
+                  id="cli-message"
+                  code='moltbot agent --message "What\'s my schedule today?" --thinking high'
+                />
+                <div className="bg-accent/50 border border-primary/20 rounded-xl p-5 mt-4">
+                  <div className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium text-foreground mb-1">Next Steps</p>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        Explore the <a href="https://docs.molt.bot" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">official documentation</a> to:
+                      </p>
+                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
+                        <li>Add more chat channels</li>
+                        <li>Install community skills from ClawdHub</li>
+                        <li>Connect browser control and system tools</li>
+                        <li>Set up voice commands and Canvas UI</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -267,7 +331,7 @@ clawdbot init`}
                   <div>
                     <h3 className="text-xl font-semibold text-heading mb-2">Important Security Notice</h3>
                     <p className="text-foreground leading-relaxed">
-                      ClawDBot gives AI access to your system. Follow these security measures to protect your environment and data.
+                      Moltbot runs on YOUR machine with access to your files and system. It connects to real messaging platforms where anyone could potentially message your bot. Follow these security measures to protect your environment.
                     </p>
                   </div>
                 </div>
@@ -281,18 +345,23 @@ clawdbot init`}
                     Restrict Access to Your Bot
                   </h3>
                   <p className="text-foreground leading-relaxed mb-3">
-                    Configure ClawDBot to respond only to your commands. Add this to your config:
+                    By default, Moltbot uses <strong>pairing mode</strong>—unknown senders get a pairing code and must be approved. To manually configure access, add this to <code className="px-2 py-1 bg-muted rounded text-sm font-mono">~/.clawdbot/moltbot.json</code>:
                   </p>
                   <CodeBlock
                     id="restrict-access"
                     code={`{
-  "dmPolicy": "allowlist",
-  "allowFrom": ["YOUR_TELEGRAM_ID"],
-  "groupPolicy": "allowlist"
+  "channels": {
+    "telegram": {
+      "allowFrom": ["YOUR_TELEGRAM_ID"]
+    },
+    "whatsapp": {
+      "allowFrom": ["YOUR_PHONE_NUMBER"]
+    }
+  }
 }`}
                   />
                   <p className="text-muted-foreground text-sm mt-3">
-                    Never add ClawDBot to group chats—anyone in the chat could control it.
+                    Approve new users with: <code className="px-2 py-1 bg-muted rounded text-xs font-mono">moltbot pairing approve telegram CODE</code>
                   </p>
                 </div>
 
@@ -361,7 +430,7 @@ chmod 600 .env`}
                   <div className="flex gap-3 mb-3">
                     <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
                     <h3 className="text-xl font-semibold text-heading">
-                      "command not found: clawdbot"
+                      "command not found: moltbot"
                     </h3>
                   </div>
                   <p className="text-foreground leading-relaxed mb-3 ml-8">
@@ -400,7 +469,7 @@ chmod 600 .env`}
                       <p className="font-medium text-foreground mb-2">Option 1: Use sudo (macOS/Linux)</p>
                       <CodeBlock
                         id="sudo-install"
-                        code="sudo npm install -g clawdbot"
+                        code="sudo npm install -g moltbot@latest"
                       />
                     </div>
                     <div>
@@ -411,7 +480,7 @@ chmod 600 .env`}
 npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.profile
 source ~/.profile
-npm install -g clawdbot`}
+npm install -g moltbot@latest`}
                       />
                     </div>
                   </div>
@@ -435,8 +504,8 @@ npm install -g clawdbot`}
                     <CodeBlock
                       id="clear-cache"
                       code={`npm cache clean --force
-npm uninstall -g clawdbot
-npm install -g clawdbot`}
+npm uninstall -g moltbot
+npm install -g moltbot@latest`}
                     />
                   </div>
                 </div>
@@ -458,8 +527,8 @@ npm install -g clawdbot`}
                   <div className="ml-8">
                     <CodeBlock
                       id="approve-pairing"
-                      code={`clawdbot pairing list telegram
-clawdbot pairing approve telegram YOUR_CODE`}
+                      code={`moltbot pairing list telegram
+moltbot pairing approve telegram YOUR_CODE`}
                     />
                   </div>
                 </div>
@@ -481,7 +550,7 @@ clawdbot pairing approve telegram YOUR_CODE`}
                   <div className="ml-8">
                     <CodeBlock
                       id="gateway-debug"
-                      code="clawdbot doctor"
+                      code="moltbot doctor"
                     />
                   </div>
                 </div>
