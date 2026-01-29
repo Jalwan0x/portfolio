@@ -354,7 +354,7 @@ Create a reminder for my meeting tomorrow at 2pm`}
                 </p>
                 <CodeBlock
                   id="cli-message"
-                  code='moltbot agent --message "What\'s my schedule today?" --thinking high'
+                  code={`moltbot agent --message "What's my schedule today?" --thinking high`}
                 />
                 <div className="bg-accent/50 border border-primary/20 rounded-xl p-5 mt-4">
                   <div className="flex gap-3">
