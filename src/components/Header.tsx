@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#how-it-works", label: "Process" },
   { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "FAQ" },
+  { href: "/blog", label: "Blog" },
 ];
 
 const Header = () => {
@@ -46,13 +47,23 @@ const Header = () => {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.href}
-              href={link.href} 
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {link.label}
-            </a>
+            link.href.startsWith('#') ? (
+              <a 
+                key={link.href}
+                href={link.href} 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <a 
+                key={link.href}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            )
           ))}
         </nav>
         
@@ -76,14 +87,25 @@ const Header = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border py-6">
           <nav className="container flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a 
-                key={link.href}
-                href={link.href} 
-                className="text-foreground py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </a>
+              link.href.startsWith('#') ? (
+                <a 
+                  key={link.href}
+                  href={link.href} 
+                  className="text-foreground py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <a 
+                  key={link.href}
+                  href={link.href}
+                  className="text-foreground py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              )
             ))}
             <Button onClick={scrollToContact} className="mt-2">
               Get a Quote

@@ -27,6 +27,9 @@ const Footer = () => {
             <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">
               FAQ
             </a>
+            <a href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
+              Blog
+            </a>
           </nav>
           
           <p className="text-sm text-muted-foreground text-center md:text-right mt-6 md:mt-0">
