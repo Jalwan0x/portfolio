@@ -51,7 +51,7 @@ const ClawDBotInstallation = () => {
         
         {/* Open Graph */}
         <meta property="og:title" content="How to Install Moltbot in 5 Minutes | Complete Setup Guide" />
-        <meta property="og:description" content="Get your personal AI assistant running locally in minutes. Moltbot connects to WhatsApp, Telegram, Discord, and more—all running on YOUR machine." />
+        <meta property="og:description" content="Get your personal AI assistant running locally in minutes. Moltbot connects to WhatsApp, Telegram, Discord, and more. All running on YOUR machine." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://jalwan.app/blog/how-to-install-clawdbot" />
         <meta property="article:published_time" content="2026-01-29T00:00:00Z" />
@@ -75,7 +75,7 @@ const ClawDBotInstallation = () => {
             "@context": "https://schema.org",
             "@type": "TechArticle",
             "headline": "How to Install Moltbot in 5 Minutes (Step-by-Step Guide)",
-            "description": "Get your personal AI assistant running locally on your machine with this comprehensive installation guide—works on Mac, Windows, and Linux.",
+            "description": "Get your personal AI assistant running locally on your machine with this comprehensive installation guide. Works on Mac, Windows, and Linux.",
             "image": "https://jalwan.app/favicon.svg",
             "author": {
               "@type": "Person",
@@ -128,7 +128,7 @@ const ClawDBotInstallation = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Get your personal AI assistant running locally on your machine with this comprehensive installation guide—works on Mac, Windows, and Linux.
+              Get your personal AI assistant running locally on your machine with this comprehensive installation guide. Works on Mac, Windows, and Linux.
             </p>
           </header>
 
@@ -143,13 +143,13 @@ const ClawDBotInstallation = () => {
                 Moltbot is a <strong>personal AI assistant that runs entirely on YOUR machine</strong>. Unlike cloud-based AI tools, your data stays private and local.
               </p>
               <p className="text-lg text-foreground leading-relaxed mb-4">
-                The magic? <strong>One AI assistant across all your chat apps</strong>. Talk to Moltbot on WhatsApp, Telegram, Discord, Slack, Signal, iMessage—it's everywhere you are, powered by Claude or GPT running on your computer.
+                The magic? <strong>One AI assistant across all your chat apps</strong>. Talk to Moltbot on WhatsApp, Telegram, Discord, Slack, Signal, iMessage. It's everywhere you are, powered by Claude or GPT running on your computer.
               </p>
               <p className="text-lg text-foreground leading-relaxed mb-4">
                 It's open source (98.5k GitHub stars), fully extensible, and can actually DO things: browse the web, manage files, control your calendar, run shell commands, and more.
               </p>
               <p className="text-lg text-foreground leading-relaxed mb-4">
-                This guide shows you exactly how to install Moltbot on your system in under 5 minutes—whether you're on Windows, macOS, or Linux.
+                This guide shows you exactly how to install Moltbot on your system in under 5 minutes, whether you're on Windows, macOS, or Linux.
               </p>
             </section>
 
@@ -165,35 +165,35 @@ const ClawDBotInstallation = () => {
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <strong className="text-foreground">Node.js</strong>
-                      <span className="text-muted-foreground"> — Version 22 or higher (required)</span>
+                      <span className="text-muted-foreground"> - Version 22 or higher (required)</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <strong className="text-foreground">npm, pnpm, or yarn</strong>
-                      <span className="text-muted-foreground"> — Package manager (comes with Node.js)</span>
+                      <span className="text-muted-foreground"> - Package manager (comes with Node.js)</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <strong className="text-foreground">Operating System</strong>
-                      <span className="text-muted-foreground"> — macOS, Windows (WSL2 recommended), or Linux</span>
+                      <span className="text-muted-foreground"> - macOS, Windows (WSL2 recommended), or Linux</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <strong className="text-foreground">AI API Access</strong>
-                      <span className="text-muted-foreground"> — Claude Pro/Max or ChatGPT subscription (recommended: Claude Opus 4.5)</span>
+                      <span className="text-muted-foreground"> - Claude Pro/Max or ChatGPT subscription (recommended: Claude Opus 4.5)</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <strong className="text-foreground">Disk Space</strong>
-                      <span className="text-muted-foreground"> — At least 500MB free space</span>
+                      <span className="text-muted-foreground"> - At least 500MB free space</span>
                     </div>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ const ClawDBotInstallation = () => {
                   Run the Onboarding Wizard
                 </h3>
                 <p className="text-foreground leading-relaxed mb-4">
-                  Moltbot includes an interactive wizard that guides you through setup—it handles gateway configuration, workspace setup, channel connections, and AI model authorization:
+                  Moltbot includes an interactive wizard that guides you through setup. It handles gateway configuration, workspace setup, channel connections, and AI model authorization:
                 </p>
                 <CodeBlock
                   id="onboard"
@@ -297,7 +297,7 @@ const ClawDBotInstallation = () => {
                   Start the Gateway
                 </h3>
                 <p className="text-foreground leading-relaxed mb-4">
-                  The Gateway is Moltbot's control plane—it coordinates all channels, sessions, and tools. Start it with:
+                  The Gateway is Moltbot's control plane. It coordinates all channels, sessions, and tools. Start it with:
                 </p>
                 <CodeBlock
                   id="start-gateway"
@@ -402,7 +402,7 @@ Create a reminder for my meeting tomorrow at 2pm`}
                     Restrict Access to Your Bot
                   </h3>
                   <p className="text-foreground leading-relaxed mb-3">
-                    By default, Moltbot uses <strong>pairing mode</strong>—unknown senders get a pairing code and must be approved. To manually configure access, add this to <code className="px-2 py-1 bg-muted rounded text-sm font-mono">~/.clawdbot/moltbot.json</code>:
+                    By default, Moltbot uses <strong>pairing mode</strong>. Unknown senders get a pairing code and must be approved. To manually configure access, add this to <code className="px-2 py-1 bg-muted rounded text-sm font-mono">~/.clawdbot/moltbot.json</code>:
                   </p>
                   <CodeBlock
                     id="restrict-access"
