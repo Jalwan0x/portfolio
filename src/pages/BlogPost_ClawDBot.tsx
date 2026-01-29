@@ -222,6 +222,24 @@ clawdbot init`}
               <div className="mb-10">
                 <h3 className="text-2xl font-semibold text-heading mb-4 flex items-center gap-2">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">5</span>
+                  Run Initial Security Check
+                </h3>
+                <p className="text-foreground leading-relaxed mb-4">
+                  Before starting, verify everything is configured correctly:
+                </p>
+                <CodeBlock
+                  id="doctor-check"
+                  code="clawdbot doctor"
+                />
+                <p className="text-foreground leading-relaxed">
+                  This command checks your installation and identifies any configuration issues. Fix any reported problems before proceeding.
+                </p>
+              </div>
+
+              {/* Step 6 */}
+              <div className="mb-10">
+                <h3 className="text-2xl font-semibold text-heading mb-4 flex items-center gap-2">
+                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">6</span>
                   Start ClawDBot
                 </h3>
                 <p className="text-foreground leading-relaxed mb-4">
@@ -234,6 +252,100 @@ clawdbot init`}
                 <p className="text-foreground leading-relaxed">
                   Your bot is now running. Press <code className="px-2 py-1 bg-muted rounded text-sm font-mono">Ctrl+C</code> to stop it.
                 </p>
+              </div>
+            </section>
+
+            {/* Security Best Practices */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-semibold text-heading mb-6 heading-display">
+                Security Best Practices
+              </h2>
+              
+              <div className="bg-destructive/10 border-l-4 border-destructive rounded-xl p-6 mb-8">
+                <div className="flex gap-3 mb-3">
+                  <AlertCircle className="h-6 w-6 text-destructive flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-heading mb-2">Important Security Notice</h3>
+                    <p className="text-foreground leading-relaxed">
+                      ClawDBot gives AI access to your system. Follow these security measures to protect your environment and data.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                {/* Security tip 1 */}
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-heading mb-3 flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    Restrict Access to Your Bot
+                  </h3>
+                  <p className="text-foreground leading-relaxed mb-3">
+                    Configure ClawDBot to respond only to your commands. Add this to your config:
+                  </p>
+                  <CodeBlock
+                    id="restrict-access"
+                    code={`{
+  "dmPolicy": "allowlist",
+  "allowFrom": ["YOUR_TELEGRAM_ID"],
+  "groupPolicy": "allowlist"
+}`}
+                  />
+                  <p className="text-muted-foreground text-sm mt-3">
+                    Never add ClawDBot to group chats—anyone in the chat could control it.
+                  </p>
+                </div>
+
+                {/* Security tip 2 */}
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-heading mb-3 flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    Whitelist Commands Only
+                  </h3>
+                  <p className="text-foreground leading-relaxed mb-3">
+                    Limit which system commands the bot can execute:
+                  </p>
+                  <CodeBlock
+                    id="whitelist-commands"
+                    code={`{
+  "allowedCommands": ["git", "npm", "curl"],
+  "blockedCommands": ["rm -rf", "sudo", "chmod"]
+}`}
+                  />
+                  <p className="text-muted-foreground text-sm mt-3">
+                    If the bot gets compromised, it can only run whitelisted commands.
+                  </p>
+                </div>
+
+                {/* Security tip 3 */}
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-heading mb-3 flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    Use Minimum-Privilege API Tokens
+                  </h3>
+                  <p className="text-foreground leading-relaxed">
+                    When connecting to services like GitHub or Gmail, use read-only tokens where possible. Never grant full-access permissions unless absolutely necessary.
+                  </p>
+                </div>
+
+                {/* Security tip 4 */}
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-heading mb-3 flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    Protect Your Credentials
+                  </h3>
+                  <p className="text-foreground leading-relaxed mb-3">
+                    Secure your credential files with proper permissions:
+                  </p>
+                  <CodeBlock
+                    id="secure-creds"
+                    code={`chmod 700 ~/.clawdbot/credentials
+chmod 600 .env`}
+                  />
+                  <p className="text-muted-foreground text-sm mt-3">
+                    This prevents other users on your system from accessing your secrets.
+                  </p>
+                </div>
               </div>
             </section>
 
@@ -325,6 +437,51 @@ npm install -g clawdbot`}
                       code={`npm cache clean --force
 npm uninstall -g clawdbot
 npm install -g clawdbot`}
+                    />
+                  </div>
+                </div>
+
+                {/* Issue 4 */}
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex gap-3 mb-3">
+                    <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
+                    <h3 className="text-xl font-semibold text-heading">
+                      Bot not responding to messages
+                    </h3>
+                  </div>
+                  <p className="text-foreground leading-relaxed mb-3 ml-8">
+                    <strong>Cause:</strong> Pairing wasn't approved after setup.
+                  </p>
+                  <p className="text-foreground leading-relaxed ml-8">
+                    <strong>Solution:</strong> Check and approve pending pairings:
+                  </p>
+                  <div className="ml-8">
+                    <CodeBlock
+                      id="approve-pairing"
+                      code={`clawdbot pairing list telegram
+clawdbot pairing approve telegram YOUR_CODE`}
+                    />
+                  </div>
+                </div>
+
+                {/* Issue 5 */}
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex gap-3 mb-3">
+                    <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
+                    <h3 className="text-xl font-semibold text-heading">
+                      Gateway won't start
+                    </h3>
+                  </div>
+                  <p className="text-foreground leading-relaxed mb-3 ml-8">
+                    <strong>Cause:</strong> Configuration issue or port conflict.
+                  </p>
+                  <p className="text-foreground leading-relaxed ml-8">
+                    <strong>Solution:</strong> Run diagnostics to identify the issue:
+                  </p>
+                  <div className="ml-8">
+                    <CodeBlock
+                      id="gateway-debug"
+                      code="clawdbot doctor"
                     />
                   </div>
                 </div>
